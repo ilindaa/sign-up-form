@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <div class="img-sidebar">
+        <div class="brand-logo"></div>
+    </div>
+    <!-- "Hamburger" -->
+    <!-- Form Validation -->
+    <div>
+        <div class="top">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <em>now</em> to get started.</p>
+            <p>You <em>know</em> you want to.</p>
+        </div>
+        <div class="middle">
+            <h3>Let's do this!</h3>
+            <p hidden>Required fields are followed by <span aria-label="required">*</span>.</p>
+
+            <form action="/my-handing-form-page" method="post">
+               <div>
+                   <label for="first-name">First Name</label>
+                   <input type="text" id="first-name" name="firstName" required>
+               </div>
+
+               <div>
+                   <label for="last-name">Last Name</label>
+                   <input type="text" id="last-name" name="lastName" required>
+               </div>
+
+               <div>
+                   <label for="email">Email</label>
+                   <input type="email" id="email" name="email" required>
+               </div>
+
+                <div>
+                    <label for="phone-num">Phone Number</label>
+                    <input type="tel" id="phone-num" name="phoneNum">
+                </div>
+
+                <div>
+                    <label for="pwd">Password</label>
+                    <input type="password" id="pwd" name="pwd" required>
+                </div>
+
+                <div>
+                    <label for="confirm-pwd">Confirm Password</label>
+                    <input type="password" id="confirm-pwd" name="confirmPwd" required>
+                </div>
+            </form>
+        </div>
+        <div class="bottom">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a link href="">Log in</a></p>
+        </div>
+    </div>
+</body>
+</html>
