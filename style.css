@@ -1,11 +1,116 @@
-/*
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-label {
-    text-transform: uppercase;
+/*
+@font-face {
+    font-family: "norse-bold";
+    src:
+        url("fonts/norse-bold-webfont.woff2") format("woff2"),
+        url("fonts/norse-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 */
+
+.container {
+    display: flex;
+}
+
+/* image sidebar */
+.img-sidebar {
+    background-image: url("Images/syuhei-inoue-kaoHI0iHJPM-unsplash.jpg");
+    background-size: cover;
+    width: 35vw;
+    min-height: 100vh;
+}
+
+.brand-area {
+    background-color: #07191d;
+    opacity: 55%;
+    position: relative;
+    width: 100%;
+    top: 10rem;
+    height: 120px;
+}
+
+.photo-credits,
+.white-text,
+.brand-logo {
+    color: white;
+}
+
+/* form-side */
+.form-side {
+    width: calc(100vw - 35vw);
+    min-height: 100vh;
+}
+
+/* top */
+p {
+    font-weight: bold;
+}
+
+/* form flex boxes */
+.form-row {
+    display: flex;
+}
+
+/* form labels */
+label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    display: flex;
+}
+
+/* button */
+button {
+    background-color: #35752a;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 11rem;
+    border-radius: 5px;
+}
+
+/* input */
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:focus {
+    /* gets rid of the default black outline */
+    outline: none;
+    border: 1px solid #2d5adb;
+    box-shadow: 2px 1px 4px 0px #d1d1d1;
+}
+
+.pwd:invalid,
+.confirm-pwd:invalid {
+    border: 1px solid #be2c2c;
+}
+
+/* colors */
+.top,
+.bottom {
+    background-color: #f9fafb;
+}
+
+.middle {
+    background-color: #ffffff;
+}
+
+.log-in-link {
+    text-decoration: none;
+    color: #35752a;
+}
