@@ -55,6 +55,8 @@ h3 {
 
 .brand-content {
     gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .brand-item {
@@ -129,12 +131,9 @@ p {
 
 .form-row {
     display: flex;
-    gap: 4rem;
-}
-
-.form-row-space {
-    /* space between the input boxes */
-    margin-bottom: 2rem;
+    /* wrap the input text, give form input horizontal spacing */
+    flex-wrap: wrap;
+    column-gap: 4rem;
 }
 
 /* form labels */
@@ -173,7 +172,9 @@ input {
     border: 1px solid #E5E7EB;
     border-radius: 5px;
     padding: 5px;
-    width: 13.5rem;
+    width: 12rem;
+    /* form input vertical spacing */
+    margin-bottom: 1.5rem;
 }
 
 input:focus {
