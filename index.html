@@ -11,26 +11,33 @@
     <div class="container">
         <div class="img-sidebar">
             <div class="brand-area">
-
+                <div class="brand-content">
+                    <div class="brand-item"><img src="Images/twemoji_shinto_shrine.png" class="brand-logo"></div> 
+                    <div class="brand-item">Shrine</div>
+                </div>
             </div>
-            <div class="photo-credits">
-                Photo by <a class="white-text" href="https://unsplash.com/@_______life_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Syuhei Inoue</a> on 
-                <a class="white-text" href="https://unsplash.com/photos/kaoHI0iHJPM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            <div class="credits-container">
+                <div class="photo-credits">
+                    Photo by <a class="white-text" href="https://unsplash.com/@_______life_" target="_blank">Syuhei Inoue</a> on
+                    <a class="white-text" href="https://unsplash.com/photos/kaoHI0iHJPM" target="_blank">Unsplash</a>
+                </div>
             </div>
         </div>
         <!-- "Hamburger" -->
         <!-- Form Validation -->
         <div class="form-side">
+
             <div class="top">
-                <p>This is not a real online service! You know you need something<br>like this in your life to help you realize your deepest dreams.<br>Sign up <em>now</em> to get started.</p>
-                <p><br>You <em>know</em> you want to.</p>
+                <h3>This is not a real online service! You know you need something<br>like this in your life to help you realize your deepest dreams.<br>Sign up <em>now</em> to get started.</h3>
+                <h3>You <em>know</em> you want to.</h3>
             </div>
+
             <div class="middle">
-                <h3>Let's do this!</h3>
+                <h3 class="middle-h3">Let's do this!</h3>
                 <p hidden>Required fields are followed by <span aria-label="required">*</span>.</p>
                 <form action="/my-handing-form-page" method="post">
 
-                   <div class="form-row">
+                   <div class="form-row form-row-space">
                        <div>
                            <label for="first-name">First Name</label>
                            <input type="text" id="first-name" name="firstName" required>
@@ -39,31 +46,29 @@
                            <label for="last-name">Last Name</label>
                            <input type="text" id="last-name" name="lastName" required>
                        </div>
+                        <!-- Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars) -->
+                        <div>
+                            <label for="pwd">Password</label>
+                            <input type="password" id="pwd" class="error" name="pwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        </div>
                    </div>
 
-                   <!-- USA Phone Number: US based Phone Number in the format of: 123-456-7890 -->
+                   <!-- error class - use listeners in JS to update -->
                    <div class="form-row">
                        <div>
                            <label for="email">Email</label>
                            <input type="email" id="email" name="email" required>
                        </div>
+                        <!-- USA Phone Number: US based Phone Number in the format of: 123-456-7890 -->
                         <div>
                             <label for="phone-num">Phone Number</label>
                             <input type="tel" id="phone-num" name="phoneNum" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
-                        </div>
-                   </div>
-
-                   <!-- Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars) -->
-                    <div class="form-row">
-                        <div>
-                            <label for="pwd">Password</label>
-                            <input type="password" id="pwd" class="error" name="pwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                         </div>
                         <div>
                             <label for="confirm-pwd">Confirm Password</label>
                             <input type="password" id="confirm-pwd" class="error" name="confirmPwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                         </div>
-                    </div>
+                   </div>
             </div>
 
             <div class="bottom">

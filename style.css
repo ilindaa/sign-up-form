@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
 
+/* Chiq Reduced Font by ingoFonts is free for personal use (https://www.dafont.com/chiq.font) */
+@font-face {
+    font-family: "chiq";
+    src:
+        url("Fonts/chiq_reduced_bold-webfont.woff2") format("woff2"),
+        url("Fonts/chiq_reduced_bold-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +17,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/*
-@font-face {
-    font-family: "norse-bold";
-    src:
-        url("fonts/norse-bold-webfont.woff2") format("woff2"),
-        url("fonts/norse-bold-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+:root {
+    --img-sidebar-width: 35vw;
+    --brand-area-height: 8rem;
 }
-*/
+
+h3 {
+    margin: 0.75rem 0rem;
+}
 
 .container {
     display: flex;
@@ -26,59 +34,138 @@
 .img-sidebar {
     background-image: url("Images/syuhei-inoue-kaoHI0iHJPM-unsplash.jpg");
     background-size: cover;
-    width: 35vw;
+    width: var(--img-sidebar-width);
     min-height: 100vh;
 }
 
-.brand-area {
-    background-color: #07191d;
-    opacity: 55%;
-    position: relative;
-    width: 100%;
-    top: 10rem;
-    height: 120px;
+.brand-area,
+.brand-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.brand-area {
+    background-color: rgba(7, 25, 29, 0.55); /* changes the opacity of bg but not the text */
+    position: relative;
+    width: 100%;
+    top: calc(100vh/3 - var(--brand-area-height));
+    height: var(--brand-area-height);
+}
+
+.brand-content {
+    gap: 1rem;
+}
+
+.brand-item {
+    font-family: "chiq";
+    font-size: 3rem;
+    display: flex;
+}
+
+
+.brand-logo {
+    height: 90px;
+    width: 90px;
+}
+
+/* white text */
 .photo-credits,
 .white-text,
-.brand-logo {
+.brand-item {
     color: white;
+}
+
+.credits-container {
+    display: flex;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+
+.photo-credits {
+    position: absolute;
+    bottom: 1rem;
 }
 
 /* form-side */
 .form-side {
-    width: calc(100vw - 35vw);
+    width: calc(100vw - var(--img-sidebar-width));
     min-height: 100vh;
+}
+
+.top,
+.middle,
+.bottom {
+    padding-left: 3rem;
+    min-height: calc(100vh/3);
 }
 
 /* top */
 p {
-    font-weight: bold;
+    font-weight: normal;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* form flex boxes */
+/* middle */
+.middle {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 5px 10px #dadbdc;
+    /* show the box-shadow but don't go over the 100vh/3 space */
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+.middle-h3 {
+    margin: 1.5rem 0rem;
+}
+
 .form-row {
     display: flex;
+    gap: 4rem;
+}
+
+.form-row-space {
+    /* space between the input boxes */
+    margin-bottom: 2rem;
 }
 
 /* form labels */
 label {
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-size: 0.75rem;
     display: flex;
+    font-weight: 500;
+}
+
+/* bottom */
+.bottom {
+    display: flex;
+    flex-direction: column;
 }
 
 /* button */
 button {
     background-color: #35752a;
     color: white;
+    font-size: 0.9rem;
     font-weight: bold;
     border: none;
     cursor: pointer;
-    padding: 10px;
-    width: 11rem;
+    padding: 0.75rem;
+    width: 12rem;
     border-radius: 5px;
+    /* space between the middle div and the last line */
+    margin: 1.5rem 0rem;
+    box-shadow: 4px 4px 4px 0px #d1d2d1;
 }
 
 /* input */
@@ -86,6 +173,7 @@ input {
     border: 1px solid #E5E7EB;
     border-radius: 5px;
     padding: 5px;
+    width: 13.5rem;
 }
 
 input:focus {
@@ -95,22 +183,14 @@ input:focus {
     box-shadow: 2px 1px 4px 0px #d1d1d1;
 }
 
-.pwd:invalid,
-.confirm-pwd:invalid {
-    border: 1px solid #be2c2c;
-}
-
 /* colors */
 .top,
 .bottom {
     background-color: #f9fafb;
 }
 
-.middle {
-    background-color: #ffffff;
-}
-
 .log-in-link {
+    font-weight: bold;
     text-decoration: none;
     color: #35752a;
 }
