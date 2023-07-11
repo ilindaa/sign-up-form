@@ -22,10 +22,6 @@
     --brand-area-height: 8rem;
 }
 
-h3 {
-    margin: 0.75rem 0rem;
-}
-
 .container {
     display: flex;
 }
@@ -65,7 +61,6 @@ h3 {
     display: flex;
 }
 
-
 .brand-logo {
     height: 90px;
     width: 90px;
@@ -87,6 +82,7 @@ h3 {
 .photo-credits {
     position: absolute;
     bottom: 1rem;
+    opacity: 0.55;
 }
 
 /* form-side */
@@ -103,14 +99,14 @@ h3 {
 }
 
 /* top */
-p {
-    font-weight: normal;
-}
-
 .top {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+h3 {
+    margin: 0.75rem 0rem;
 }
 
 /* form flex boxes */
@@ -141,8 +137,8 @@ label {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.75rem;
-    display: flex;
     font-weight: 500;
+    display: flex;
 }
 
 /* bottom */
@@ -151,28 +147,30 @@ label {
     flex-direction: column;
 }
 
+button,
+input {
+    border-radius: 5px;
+    width: 12rem;
+}
+
 /* button */
 button {
     background-color: #35752a;
     color: white;
+    cursor: pointer;
     font-size: 0.9rem;
     font-weight: bold;
     border: none;
-    cursor: pointer;
     padding: 0.75rem;
-    width: 12rem;
-    border-radius: 5px;
     /* space between the middle div and the last line */
     margin: 1.5rem 0rem;
     box-shadow: 4px 4px 4px 0px #d1d2d1;
 }
 
-/* input */
+/* input (form validation CSS) */
 input {
     border: 1px solid #E5E7EB;
-    border-radius: 5px;
     padding: 5px;
-    width: 12rem;
     /* form input vertical spacing */
     margin-bottom: 1.5rem;
 }
@@ -180,8 +178,17 @@ input {
 input:focus {
     /* gets rid of the default black outline */
     outline: none;
-    border: 1px solid #2d5adb;
+    border-color: #2d5adb;
     box-shadow: 2px 1px 4px 0px #d1d1d1;
+}
+
+input:valid {
+    border: 2px solid #35752a;
+}
+
+/* error class - use JS for validation */
+.error {
+    border: 2px solid #de2a42;
 }
 
 /* colors */

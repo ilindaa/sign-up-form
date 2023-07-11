@@ -24,20 +24,18 @@
                 </div>
             </div>
         </div>
-        <!-- "Hamburger" -->
-        <!-- Form Validation -->
+        <!-- "Hamburger" section -->
         <div class="form-side">
-
+            <!-- Top -->
             <div class="top">
                 <h3>This is not a real online service! You know you need something<br>like this in your life to help you realize your deepest dreams.<br>Sign up <em>now</em> to get started.</h3>
                 <h3>You <em>know</em> you want to.</h3>
             </div>
-
+            <!-- Middle -->
             <div class="middle">
                 <h3 class="middle-h3">Let's do this!</h3>
-                <p hidden>Required fields are followed by <span aria-label="required">*</span>.</p>
+                <!-- <p hidden>Required fields are followed by <span aria-label="required">*</span>.</p> -->
                 <form action="/my-handing-form-page" method="post">
-
                    <div class="form-row">
                        <div>
                            <label for="first-name">First Name</label>
@@ -47,36 +45,33 @@
                            <label for="last-name">Last Name</label>
                            <input type="text" id="last-name" name="lastName" required>
                        </div>
-                        <!-- Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars) -->
-                        <div>
-                            <label for="pwd">Password</label>
-                            <input type="password" id="pwd" class="error" name="pwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                       <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
                    </div>
-
-                   <!-- error class - use listeners in JS to update -->
                    <div class="form-row">
-                       <div>
-                           <label for="email">Email</label>
-                           <input type="email" id="email" name="email" required>
-                       </div>
                         <!-- USA Phone Number: US based Phone Number in the format of: 123-456-7890 -->
                         <div>
                             <label for="phone-num">Phone Number</label>
                             <input type="tel" id="phone-num" name="phoneNum" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
                         </div>
+                        <!-- Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars) -->
+                        <div>
+                            <label for="pwd">Password</label>
+                            <input type="password" id="pwd" name="pwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        </div>
                         <div>
                             <label for="confirm-pwd">Confirm Password</label>
-                            <input type="password" id="confirm-pwd" class="error" name="confirmPwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                            <input type="password" id="confirm-pwd" name="confirmPwd" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                         </div>
                    </div>
             </div>
-
+            <!-- Bottom -->
             <div class="bottom">
                 <button type="submit">Create Account</button>
-                <p>Already have an account? <a class="log-in-link" link href="">Log in</a></p>
+                <p>Already have an account? <a class="log-in-link" link href="#">Log in</a></p>
             </div>
-            
         </form>
     </div>
 </body>
