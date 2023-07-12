@@ -121,8 +121,12 @@ h3 {
     margin-top: -10px;
 }
 
+.middle-text {
+    margin: 1rem 0rem;
+}
+
 .middle-h3 {
-    margin: 1.5rem 0rem;
+    margin: 0rem;
 }
 
 .form-row {
@@ -171,8 +175,6 @@ button {
 input {
     border: 1px solid #E5E7EB;
     padding: 5px;
-    /* form input vertical spacing */
-    margin-bottom: 1.5rem;
 }
 
 input:focus {
@@ -202,3 +204,16 @@ input:valid {
     text-decoration: none;
     color: #35752a;
 }
+
+/* mini, red text */
+.mini-text {
+    font-size: 0.75rem;
+}
+
+.red-text {
+    color: #de2a42;
+}
+
+    .rt-space {
+        margin-bottom: 1rem;
+    }
