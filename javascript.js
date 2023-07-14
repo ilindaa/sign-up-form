@@ -80,16 +80,16 @@ function validateRegexPwd() {
         pwdText.innerText = "";
         // Testing the regex
         if(!/(?=.*[A-Z])/.test(pwd.value)) {
-            pwdText.innerText += "One uppercase letter.\n";
+            pwdText.innerText += "* One uppercase letter.\n";
         }
         if(!/(?=.*[a-z])/.test(pwd.value)) {
-            pwdText.innerText += "One lowercase letter.\n";
+            pwdText.innerText += "* One lowercase letter.\n";
         }
         if(!/((?=.*\d)|(?=.*\W+))/.test(pwd.value)) {
-            pwdText.innerText += "One number or special character.\n";
+            pwdText.innerText += "* One number or special character.\n";
         }
         if(!/(?=^.{8,}$)/.test(pwd.value)) {
-            pwdText.innerText += "At least 8 characters.\n";
+            pwdText.innerText += "* At least 8 characters.\n";
         } 
     } else {
         pwdText.innerText = '';
